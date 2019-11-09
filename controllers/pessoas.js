@@ -21,12 +21,14 @@ const deleteOne = async( { Pessoa }, req, res) => {
 }
 //editando informações
 
-const editForm = async({ Pessoa }, req, res) => {
-   const pessoa = await Pessoa.findById(req.params.id)
-    res.render('pessoas/edit', { pessoa })
+const editForm = async({Pessoa}, req, res) => {
+    const home = await Pessoa.findByPk(req.params.id)
+    res.render('pessoas/edit', {home})
+    console.log(home[Object])
 }
 
-const editProcess = async({Pessoa}, req, res) => {
+
+const editProcess = async( { Pessoa }, req, res) => {
     await Pessoa.update(req.body, {
         where: {
             id: req.params.id

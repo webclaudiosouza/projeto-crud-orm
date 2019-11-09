@@ -1,17 +1,18 @@
 <% include ../partials/header.ejs %>
 <div class="container">
-<h1>.</h1>
-<h1>Nova pessoa</h1>
+    <h1>.</h1>
+    <h1>editar pessoa</h1>
 
-<p><a href="/pessoas">voltar para a lista de pessoas</a></p>
+    <p><a href="/pessoas">voltar para a lista de pessoas</a></p>
 
-<form method="post" class="form-group">
-    <label>Nome</label>
-    <input type="name" name="nome" placeholder="nome" class="form-control" value="<%= pessoa.nome %>">
-    <label>Cargo</label>
-    <input type="text" name="cargo" placeholder="cargo" class="form-control" value="<%= pessoa.cargo %>" >
-    <input type="submit" value="Salvar" class="btn btn-primary mt-3 ">
-
-</form>
+    <form method="post" class="form-group">
+        
+        <label>Nome</label>
+        <input type="name" name="nome" placeholder="nome" class="form-control" value="<%= home.nome %>">
+        <label>Cargo</label>
+        <input type="text" name="cargo" placeholder="cargo" class="form-control" value="<%= home.cargo %>">
+        <input type="submit" value="Salvar" class="btn btn-primary mt-3 ">
+        
+    </form>
 </div>
 <% include ../partials/footer.ejs %>
